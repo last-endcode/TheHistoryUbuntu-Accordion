@@ -1,13 +1,113 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;700&family=Nanum+Gothic&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --ffprimary: 'KoHo', sans-serif;
+  --ffsecond: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  background: #262626;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90vw;
+  max-width: 650px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 1rem 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.25;
+  text-align: justify;
+  margin-bottom: 1.25rem;
+}
+
+.container h3 {
+  text-transform: uppercase;
+  font-family: var(--ffprimary);
+  font-weight: 700;
+}
+.history {
+  margin-bottom: 0.5rem;
+  background: #d34613dc;
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.history header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history h4,
+.history button {
+  margin-bottom: 0.5rem;
+}
+
+.history h4 {
+  letter-spacing: 0.1rem;
+  font-family: var(--ffprimary);
+  font-weight: 700;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  margin-top: 0.5rem;
+  font-family: var(--ffsecond);
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-color: transparent;
+  font-size: 1.25rem;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.center-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ddd;
+  font-size: 0.75rem;
+}
+
+/* readmore */
+.btnreadmore {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
 }

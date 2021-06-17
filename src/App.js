@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import history from './components/history';
+import ShowHistory from './components/HistoryUbuntu';
 
 function App() {
+  const [showHistory, setShowHistory] = useState(history);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <div className='container'>
+        <h3>the history of ubuntu ~</h3>
+        <div className='section-history'>
+          {showHistory.map((history) => {
+            return <ShowHistory key={history.id} {...history} />;
+          })}
+        </div>
+        <p class='center-text'>-QnA about ubuntu -</p>
+      </div>
+    </main>
   );
 }
 
